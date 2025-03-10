@@ -14,61 +14,38 @@ Machine Learning Forecasting: Predicts stock prices for the next 7 days using Sn
 
 Financial Analysis: Includes trend analysis, volatility analysis, and portfolio optimization.
 
-Tech Stack
-
-Programming Language: Python, SQL
-
-Data Source: yfinance
-
-Database: Snowflake
-
-Orchestration: Apache Airflow
-
-Machine Learning: Snowflake ML functions
-
-Visualization: Matplotlib, Seaborn
-
-Installation & Setup
+Technology used
+Apache Airflow: For orchestrating the ETL process.
+Snowflake: For data storage, processing, and machine learning.
+Alpha Vantage API: For fetching stock price data.
+Python: The primary programming language used for the implementation.
 
 Prerequisites
 
-Ensure you have the following installed:
-
-Python 3.x
-
-Apache Airflow
-
-Snowflake Account
-
-Required Python Libraries: yfinance, pandas, snowflake-connector-python, matplotlib, seaborn
+Apache Airflow: Ensure you have Apache Airflow installed and configured in your environment.
+Snowflake Account: You need access to a Snowflake account and have the necessary privileges to create databases and schemas.
+Alpha Vantage API Key: Obtain an API key from Alpha Vantage and store it in Airflow's Variables as vantage_api_key.
 
 Steps
 
-Clone the repository:
+1. Clone the repository:
 
 git clone https://github.com/yourusername/Stock-Price-Prediction-Analytics.git
 cd Stock-Price-Prediction-Analytics
 
-Install dependencies:
+2. Install dependencies:
 
-pip install -r requirements.txt
+ pip install -r requirements.txt
+ 
+3. Configure your Airflow connection for Snowflake:
 
-Set up Snowflake credentials.
+Go to the Airflow UI.
+Navigate to Admin > Connections.
+Add a new connection with the following parameters:
+Conn Id: snowflake_conn
+Conn Type: Snowflake
+Fill in your Snowflake account information (user, password, account, etc.).
 
-Configure Airflow DAG for automated execution.
-
-Run the pipeline.
-
-Project Structure
-
-Stock-Price-Prediction-Analytics/
-│── data/                      # Contains sample data files
-│── dags/                      # Airflow DAGs for automation
-│── scripts/                   # Python scripts for data ingestion & processing
-│── models/                    # ML models and forecasting logic
-│── notebooks/                 # Jupyter notebooks for analysis
-│── reports/                   # Project reports and insights
-│── README.md                  # Project documentation
 
 Usage
 
@@ -93,6 +70,16 @@ Feel free to fork this repository and contribute by submitting pull requests.
 License
 
 This project is licensed under the MIT License.
+
+Author
+
+Akhilesh
+
+Acknowledgments
+
+Apache Airflow
+Snowflake
+Alpha Vantage
 
 
 
